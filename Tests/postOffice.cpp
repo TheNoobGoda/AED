@@ -32,22 +32,40 @@ vector<Postman> PostOffice::getPostman() const {
 
 
 //--------
-Postman::Postman() {}
+
 // TODO
+
 vector<Mail *> PostOffice::removePostman(string name) {
-    for (int i; i<= postmen.size(); i++) {
+
+    for (int i; i< postmen.size(); i++) {
         if (postmen.at(i).name == name) {
-            postmen.erase(postmen.begin()+ i -1);
-            if (myMail)
+            vector<Mail *> fds2(postmen.at(i).myMail);
+            postmen.erase(postmen.begin()+ i );
+
+            return fds2;
         }
     }
-	vector<Mail *> res;
+
+	vector<Mail *> res{};
 	return res;
 }
 
 // TODO
 vector<Mail *> PostOffice::endOfDay(unsigned int &balance) {
-	vector<Mail *> res;
+    vector<Mail *> res;
+    int cont = 0;
+    for (int i = 0; i< mailToSend.size(); i++){
+        cont = cont +mailToSend.at(i)->getPrice();
+        if (mailToSend.at(i)->getZipCode() > firstZipCode && mailToSend.at(i)->getZipCode() < lastZipCode){
+            addMailToDeliver(mailToSend.at(i));
+        } else {
+            res.push_back(mailToSend.at(i));
+        }
+    }
+    balance = cont;
+
+
+
 	return res;
 }
 
@@ -56,5 +74,7 @@ Postman PostOffice::addMailToPostman(Mail *m, string name) {
 	Postman p1;
     return p1;
 }
+
+
 
 

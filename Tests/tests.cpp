@@ -56,7 +56,7 @@ TEST(test_1, removePostman){
 
     EXPECT_EQ(0,po.getPostman().size());
 }
-/*
+
 TEST(test_1, endOfDay){
     PostOffice po("2600-000", "3999-999");
     po.addMailToSend(new RegularMail("manuel", "ana","3330-454", 401));
@@ -80,7 +80,7 @@ TEST(test_1, endOfDay){
     EXPECT_EQ(1,po2.getMailToDeliver().size());
     EXPECT_EQ(0,po2.getMailToSend().size());
 }
-
+/*
 TEST(test_1, addMailToPostman){
     PostOffice po;
     Postman p1;
