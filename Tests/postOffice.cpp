@@ -56,19 +56,17 @@ vector<Mail *> PostOffice::endOfDay(unsigned int &balance) {
     vector<Mail *> res;
     int cont = 0;
     for (int i = 0; i< mailToSend.size(); i++){
-        if ((typeid(mailToSend.at(i)).name()) == RegularMail) {}
 
-        cont = cont +mailToSend.at(i)->getPrice();
+        cont +=mailToSend.at(i)->getPrice();
+
         if (mailToSend.at(i)->getZipCode() > firstZipCode && mailToSend.at(i)->getZipCode() < lastZipCode){
             addMailToDeliver(mailToSend.at(i));
         } else {
             res.push_back(mailToSend.at(i));
         }
     }
+    mailToSend.clear();
     balance = cont;
-
-
-
 	return res;
 }
 

@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\david\Desktop\FEUP\aed\aed2122_p01_extra
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\david\Desktop\faculdade\AED\AED
 -- The C compiler identification is GNU 8.1.0
 -- The CXX compiler identification is GNU 8.1.0
 -- Detecting C compiler ABI info
@@ -11,7 +11,7 @@
 -- Check for working CXX compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Could NOT find Python (missing: Python_EXECUTABLE Interpreter) 
+-- Found Python: C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.9_3.9.2032.0_x64__qbz5n2kfra8p0/python3.9.exe (found version "3.9.7") found components: Interpreter 
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/david/Desktop/FEUP/aed/aed2122_p01_extra/cmake-build-debug
+-- Build files have been written to: C:/Users/david/Desktop/faculdade/AED/AED/cmake-build-debug

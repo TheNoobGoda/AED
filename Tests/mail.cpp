@@ -30,6 +30,7 @@ GreenMail::GreenMail(string send, string rec, string zcode, string t):
 //--------
 
 // TODO
+
 unsigned int Mail::getPrice() const {
     return 0;
 }
