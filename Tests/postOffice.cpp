@@ -1,6 +1,7 @@
 #include "postOffice.h"
 #include <string>
 
+
 PostOffice::PostOffice(string firstZCode, string lastZCode):
 								firstZipCode(firstZCode), lastZipCode(lastZCode)
 {}
@@ -55,6 +56,8 @@ vector<Mail *> PostOffice::endOfDay(unsigned int &balance) {
     vector<Mail *> res;
     int cont = 0;
     for (int i = 0; i< mailToSend.size(); i++){
+        if ((typeid(mailToSend.at(i)).name()) == RegularMail) {}
+
         cont = cont +mailToSend.at(i)->getPrice();
         if (mailToSend.at(i)->getZipCode() > firstZipCode && mailToSend.at(i)->getZipCode() < lastZipCode){
             addMailToDeliver(mailToSend.at(i));
