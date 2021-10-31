@@ -27,10 +27,14 @@ public:
 
 
 // TODO
-class NoPostmanException
+class NoPostmanException:public exception
 {
+    string name;
 public:
-	   string getName() const {return ""; }
+    NoPostmanException(string name) ;
+    NoPostmanException();
+    string getName() const {return name; }
+
 };
 
 

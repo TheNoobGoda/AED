@@ -32,21 +32,9 @@ GreenMail::GreenMail(string send, string rec, string zcode, string t):
 // TODO
 
 unsigned int Mail::getPrice() const {
-    if (typeid(Mail) == typeid(RegularMail)) {
-        if (weight <= 20 ){
-            return 50;
-        }else if(weight <= 100) {
-            return 75;
-        }else if (weight <= 500){
-            return 140;
-        }else {
-            return 325;
-        }
-    }
-
     return 0;
 }
-/*
+
 unsigned int RegularMail::getPrice() const {
     if (weight <= 20 ){
         return 50;
@@ -68,4 +56,3 @@ unsigned int GreenMail::getPrice() const {
         return 240;
     }
 }
-*/

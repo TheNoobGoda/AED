@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/david/Desktop/faculdade/AED/AED/Tests/mail.cpp
-mail.h
-C:/Users/david/Desktop/faculdade/AED/AED/Tests/mail.h
-iostream
-C:/Users/david/Desktop/faculdade/AED/AED/Tests/iostream
-
 C:/Users/david/Desktop/faculdade/AED/AED/Tests/mail.h
 string
 -
@@ -20,6 +14,8 @@ C:/Users/david/Desktop/faculdade/AED/AED/Tests/postOffice.cpp
 postOffice.h
 C:/Users/david/Desktop/faculdade/AED/AED/Tests/postOffice.h
 string
+-
+iostream
 -
 
 C:/Users/david/Desktop/faculdade/AED/AED/Tests/postOffice.h

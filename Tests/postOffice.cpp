@@ -1,6 +1,8 @@
 #include "postOffice.h"
 #include <string>
+#include <iostream>
 
+using namespace std;
 
 PostOffice::PostOffice(string firstZCode, string lastZCode):
 								firstZipCode(firstZCode), lastZipCode(lastZCode)
@@ -56,8 +58,7 @@ vector<Mail *> PostOffice::endOfDay(unsigned int &balance) {
     vector<Mail *> res;
     int cont = 0;
     for (int i = 0; i< mailToSend.size(); i++){
-
-        cont +=mailToSend.at(i)->getPrice();
+        cont += mailToSend.at(i)->getPrice();
 
         if (mailToSend.at(i)->getZipCode() > firstZipCode && mailToSend.at(i)->getZipCode() < lastZipCode){
             addMailToDeliver(mailToSend.at(i));
@@ -72,10 +73,22 @@ vector<Mail *> PostOffice::endOfDay(unsigned int &balance) {
 
 
 Postman PostOffice::addMailToPostman(Mail *m, string name) {
-	Postman p1;
+    Postman p1;
+
+        for (int i = 0; i < postmen.size(); i++) {
+            if (postmen.at(i).name == name) {
+                postmen.at(i).myMail.push_back(m);
+                return postmen.at(i);
+            }
+        }
+        throw NoPostmanException(name);
+
     return p1;
 }
 
 
+NoPostmanException::NoPostmanException(string name) {
+    this->name = name;
+}
 
-
+NoPostmanException::NoPostmanException() {}
